@@ -1,0 +1,8 @@
+span {
+    font-size: 32px;
+}
+#Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
