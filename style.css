@@ -7,93 +7,33 @@ body{
     height: 100vh;
     font-family: 'Open Sans';
 }
-
 h1, p, i{
     color: white;
 }
-
 #Navbar{
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
     border-bottom: 1px solid white;
 }
-
 #nav1 span{
     border-right: 1px solid white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Sötét mód szín
-background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 87%);
-
-background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,0.7) 95%);*/
-
-
-/*Világos mód szín:
-rgba(255, 184, 0, 0.7)
-
-rgba(255, 184, 0, 0.29)
-
-rgba(0, 0, 0, 0)*/
+span {
+    font-size: 32px;
+}
+#Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tartalom{
+    font-size: 36px;
+    
+}
+a:hover{
+    color: rgb(240,240,150);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
