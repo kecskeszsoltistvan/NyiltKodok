@@ -1,3 +1,23 @@
+body{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+    background-repeat: no-repeat;
+    margin: auto;
+    width: auto;
+    height: 100vh;
+    font-family: 'Open Sans';
+}
+h1, p, i{
+    color: white;
+}
+#Navbar{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+    border-bottom: 1px solid white;
+}
+#nav1 span{
+    border-right: 1px solid white;
+}
 span {
     font-size: 32px;
 }
@@ -5,20 +25,6 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-body{
-    background-color: black;
-    font-family:'Open Sans';
-    
-}
-h1{
-    color: white;
-    text-align: center;
-    font-size: 114px;
-}
-p{
-    color: white;
-    text-align: justify;
 }
 .tartalom{
     font-size: 36px;
@@ -31,4 +37,3 @@ a{
     text-decoration: none;
     color: white;
 }
-
