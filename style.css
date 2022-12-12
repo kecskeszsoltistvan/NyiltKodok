@@ -6,3 +6,29 @@ span {
     flex-direction: row;
     justify-content: space-between;
 }
+body{
+    background-color: black;
+    font-family:'Open Sans';
+    
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 114px;
+}
+p{
+    color: white;
+    text-align: justify;
+}
+.tartalom{
+    font-size: 36px;
+    
+}
+a:hover{
+    color: rgb(240,240,150);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
