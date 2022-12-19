@@ -42,6 +42,7 @@ h1, p, i{
     padding: 5px 15px 5px 10px;
     margin: 0px;
     color: white;
+}
 span {
     font-size: 32px;
 }
@@ -60,8 +61,25 @@ a{
 
 }
 /*Asztali nézet only*/
-@media (min-device-width: 800px) {
+@media (min-width: 800px) {
     #burgerham{
         display: none;
     }
 }
+
+
+/*Telefonos nézet*/
+@media (max-width: 450px){
+    #burgerham{
+        display: block;
+
+    }
+    #nav1{
+        display: none;
+    }
+
+    
+
+
+}
+
