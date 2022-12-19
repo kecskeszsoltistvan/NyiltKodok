@@ -7,28 +7,49 @@ body{
     height: 100vh;
     font-family: 'Open Sans';
 }
-h1, p, i{
-    color: white;
-}
-#Navbar{
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
-    border-bottom: 1px solid white;
-}
-#nav1 span{
-    border-right: 1px solid white;
-}
-span {
-    font-size: 32px;
-}
 #Navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+    border-bottom: 1px solid white;
+}
+#nav1 {
+    display: flex;
+    width: 550px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#nav2 {
+    display: flex;
+    width: 100px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+h1, p, i{
+    color: white;
+}
+#nav1 span{
+    border-right: 1px solid white;
+    padding: 5px 10px 5px 10px;
+    margin: 0px;
+}
+#nav2 span{
+    border-left: 1px solid white;
+    padding: 5px 15px 5px 10px;
+    margin: 0px;
+    color: white;
+span {
+    font-size: 32px;
 }
 .tartalom{
-    font-size: 36px;
-    
+
+    font-size: 32px;
+    text-align: justify;
+    padding: 50px;
 }
 a:hover{
     color: rgb(240,240,150);
@@ -36,4 +57,11 @@ a:hover{
 a{
     text-decoration: none;
     color: white;
+
+}
+/*Asztali nézet only*/
+@media (min-device-width: 800px) {
+    #burgerham{
+        display: none;
+    }
 }
