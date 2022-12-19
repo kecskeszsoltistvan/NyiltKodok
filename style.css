@@ -64,3 +64,9 @@ a{
     text-decoration: none;
     color: white;
 }
+/*Asztali nézet only*/
+@media (min-device-width: 800px) {
+    #burgerham{
+        display: none;
+    }
+}
