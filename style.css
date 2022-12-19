@@ -42,20 +42,14 @@ h1, p, i{
     padding: 5px 15px 5px 10px;
     margin: 0px;
     color: white;
-}
 span {
     font-size: 32px;
 }
-#Navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 .tartalom{
+
     font-size: 32px;
     text-align: justify;
     padding: 50px;
-    
 }
 a:hover{
     color: rgb(240,240,150);
@@ -63,6 +57,7 @@ a:hover{
 a{
     text-decoration: none;
     color: white;
+
 }
 /*Asztali nézet only*/
 @media (min-device-width: 800px) {
