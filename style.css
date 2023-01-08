@@ -60,6 +60,17 @@ a{
     color: white;
 
 }
+#fomenu-gomb{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+#Open-Source-Logo-Letter{
+    height: 26px;
+    top: 4px;
+    align-self: center;
+}
 /*Asztali nézet only*/
 @media (min-device-width: 800px) {
     #burgerham{
