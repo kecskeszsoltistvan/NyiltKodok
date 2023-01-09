@@ -71,15 +71,24 @@ a{
 /*Telefonos nézet*/
 @media (max-width: 450px){
     #burgerham{
-        display: block;
 
+        display: flex;
+        
     }
     #nav1{
         display: none;
     }
 
+    #Navbar {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0px;
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+        border-bottom: 1px solid white;
     
-
 
 }
 
+}
