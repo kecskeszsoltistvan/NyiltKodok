@@ -71,8 +71,8 @@ a{
 @media (max-width:800px) and (min-width:450px) {
     #logo{
         border-right: 1px solid white;
-        padding: 5px 10px 5px 10px;
-        margin: 0px;
+        padding: 5px 10px 5px 10px;        
+        margin: 0px;       
     }
     #OS,#MK,#NJ{
         display: none;
@@ -80,7 +80,7 @@ a{
     #Navbar {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content:space-between;
         padding: 0px;
         background: rgb(0,0,0);
         background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
@@ -88,5 +88,9 @@ a{
     }
     #szoveg2{
         margin-top: 100px;
+        
+    }
+    #burgerham{
+        padding-top: 3px;
     }
 }
