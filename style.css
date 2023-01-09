@@ -69,10 +69,14 @@ a{
 }
 /*Tabletes nézet only*/
 @media (max-width:800px) and (min-width:450px) {
+    body{
+        height: auto;
+    }
     #logo{
         border-right: 1px solid white;
         padding: 5px 10px 5px 10px;        
-        margin: 0px;       
+        margin: 0px; 
+              
     }
     #OS,#MK,#NJ{
         display: none;
