@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fény teszt 1</title>
+</head>
+<body>
+    <a href="javascript:void(0);" onclick="myFunction()" id="kod">☾</a>
+    <script>
+        function myFunction() {
+                var atag = document.getElementById("kod");
+                if (kod.textContent == "☾") {
+                    document.body.style.backgroundColor = "black";
+                    atag.textContent = "☼";
+                    atag.style.color = "white";
+
+                    atag.onclick = "myFunction()";
+                    const dark = true
+
+                    localStorage.setItem("SotetMod", dark)
+                }
+                else if (kod.textContent != "☾") {
+                    document.body.style.backgroundColor = "white";
+                    atag.textContent = "☾";
+                    atag.style.color = "black";
+                    atag.onclick = "myFunction()";
+                    const dark = false
+
+                    localStorage.setItem("SotetMod", dark)
+                }
+        }
+
+    </script>
+</body>
+</html>
