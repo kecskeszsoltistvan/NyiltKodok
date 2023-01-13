@@ -70,6 +70,12 @@ a{
     height: 26px;
     top: 4px;
     align-self: center;
+    height: 28px;
+    width: 28px;
+    background-image: url(./KépekÉsEgyebek/O.png);
+}
+#Open-Source-Logo-Letter:hover{
+    background-image: url(./KépekÉsEgyebek/Logo1.gif);
 }
 /*Asztali nézet only*/
 @media (min-device-width: 800px) {
