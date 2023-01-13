@@ -92,9 +92,21 @@ a{
 
     body{
         height: auto;
-    }
+
+
+}
     span{
         text-align: center;
-    }
 
+
+}
+
+    #logo{
+        width: 35px;
+        margin-top: 10px;
+        margin-bottom: 11px;
+        margin-left: 2px;
+        background-image: url(.//KépekÉsEgyebek/O.png);
+    }
+   
 }
