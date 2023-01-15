@@ -7,7 +7,6 @@
     <title>Fény teszt 2</title>
 <style>
     body{
-        background: rgb(0,0,0);
         background: linear-gradient(360deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
         background-repeat: no-repeat;
         margin: auto;
@@ -23,8 +22,8 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 0px;
-        background: rgb(0,0,0);
         background: linear-gradient(270deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
+        color: white;
         border-bottom: 1px solid white;
     }
     .nav-dark-mode{
@@ -36,7 +35,7 @@
        var element = document.body;
        element.classList.toggle("dark-mode");
        var element2 = document.getElementById("Navbar");
-       element2.classList.add("nav-dark-mode");
+       element2.classList.toggle("nav-dark-mode");
        var x = document.getElementById("kod");
         if (x.innerHTML === "☼") {
             x.innerHTML = "☾";
@@ -47,8 +46,8 @@
     </script>
 </head>
 <body>
-    <div class="Navbar" class="nav-dark-mode">
-        <span><a onclick="myFunction()" id="kod" >◑</a></span>
+    <div id="Navbar" class="Navbar">
+        <span><a onclick="myFunction()" id="kod" >☾</a></span>
     </div>
 </div>
 </body>
