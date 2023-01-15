@@ -8,6 +8,40 @@
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>OP - Főoldal</title>
+    <style>
+        body{
+            background: rgb(0,0,0);
+            background: linear-gradient(360deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
+            background-repeat: no-repeat;
+            margin: auto;
+            width: auto;
+            height: 100vh;
+            font-family: 'Open Sans';
+        }
+        .dark-mode{
+        background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+        }     
+        #Navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0px;
+            background: rgb(0,0,0);
+            background: linear-gradient(270deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
+            border-bottom: 1px solid white;
+        }
+        .nav-dark-mode{
+            background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+            }   
+    </style>
+    <script>
+        function myFunction() {
+           var element1 = document.body;
+           element1.classList.toggle("dark-mode");
+           var element2 = document.getElementById("Navbar");
+           element2.classList.toggle("nav-dark-mode");
+        }
+        </script>
 </head>
 <body>
     <div id="Navbar">
@@ -20,7 +54,7 @@
             <span style="white-space: nowrap;"><a href="./nevjegy.html">Névjegy</a></span>
         </div>
         <div id="nav2">
-            <span>☾</span>
+            <span><a href="javascript:void(0);" onclick="myFunction()" id="kod">◑</a></span>
             <div id="burgerham">
                 <span class="no-desk">☰</span>
             </div>
