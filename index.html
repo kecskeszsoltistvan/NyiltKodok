@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./KépekÉsEgyebek/Ikon.gif" type="image/gif"/>
+    <link rel="icon" href="./Képek és egyebek/Ikon.gif" type="image/gif"/>
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>OP - Főoldal</title>
     <style>
         body{
-            background: rgb(0,0,0);
             background: linear-gradient(360deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
             background-repeat: no-repeat;
             margin: auto;
@@ -22,42 +21,82 @@
         background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
         }     
         .Navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0px;
-        background: linear-gradient(270deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
-        color: white;
-        border-bottom: 1px solid white;
-    }
-    .nav-dark-mode{
-        background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
-        }   
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0px;
+            background: linear-gradient(270deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
+            color: white;
+            border-bottom: 1px solid white;
+        }
+        .nav-dark-mode{
+            background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+        } 
+        .Hamburger, .HamburgerOpen{
+            display: none;
+        }
+        @media (max-width: 800px) {
+            .HamburgerOpen{
+                z-index: 2;
+                position: fixed;
+                right: 0;
+                top: 55px;
+                background-color: rgb(165, 118, 0);
+                border-left: 1px solid white;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            .HamburgerSotet{
+                background-color: rgb(0,0,80);
+            }
+        }
     </style>
     <script>
         function sotet() {
-            var element1 = document.body;
-            element1.classList.toggle("dark-mode");
-            var element2 = document.getElementById("Navbar");
-            element2.classList.toggle("nav-dark-mode");
-        }
+           var element1 = document.body;
+           element1.classList.toggle("dark-mode");
+           var element2 = document.getElementById("Navbar");
+           element2.classList.toggle("nav-dark-mode");
+           var element3 = document.getElementById("Hamburger");
+           element3.classList.toggle("HamburgerSotet");
+        } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
+        function HamburgerMenu() {
+            var test = document.body;
+            var x = document.getElementById("Hamburger");
+            if (x.className === "Hamburger") {
+              x.className = "HamburgerOpen";
+            } 
+            else if (x.className === "Hamburger HamburgerSotet") {
+                x.className = "HamburgerOpen HamburgerSotet";
+            }
+            else if (x.className === "HamburgerOpen"){
+              x.className = "Hamburger";
+            }
+            else if (x.className === "HamburgerOpen HamburgerSotet"){
+                x.className = "Hamburger HamburgerSotet";
+              }
+          } //Hamburger menü nyitása és csukása (Amennyiben a méretezés engedi, hogy egyáltalán megjelenjen)
         </script>
 </head>
 <body>
+    <div id="Hamburger" class="Hamburger">
+        <span style="white-space: nowrap; border: white 1px solid;"><a href="./index.html">Open-source</a></span>
+        <span style="white-space: nowrap; border: white 1px solid;"><a>Megosztott kódok</a></span>
+        <span style="white-space: nowrap; border: white 1px solid;"><a href="./nevjegy.html">Névjegy</a></span>
+    </div>
     <div id="Navbar" class="Navbar">
         <div id="nav1"> 
-
             <div id="logo"></div>
             <div id="segedborder"></div>
-            <span id="oldalak">Oldalak</span>
-            <span id="OS"><a href="./index.html"><nobr>Open-source</nobr></a></span>
-            <span id="MK"><i><nobr>Megosztott kódok</nobr></i></span>
-            <span id="NJ"><a href="./nevjegy.html"><nobr>Névjegy</nobr></a></span>
+            <span id="OS" style="white-space: nowrap;"><a href="./index.html">Open-source</a></span>
+            <span id="MK" style="white-space: nowrap;"><a>Megosztott kódok</a></span>
+            <span id="NJ" style="white-space: nowrap;"><a href="./nevjegy.html">Névjegy</a></span>
         </div>
         <div id="nav2">
             <span><a href="javascript:void(0);" onclick="sotet()" id="kod">◑</a></span>
             <div id="burgerham">
-                <span class="no-desk">☰</span>
+                <span class="no-desk"><a href="javascript:void(0);" onclick="HamburgerMenu()">☰</a></span>
             </div>
         </div>
     </div>
@@ -65,8 +104,8 @@
         <!--Tartalom-->
         <div class="tartalom">
         <h1 style="text-align: center;">Open-Source</h1>
-        <p>Az Open-Source oldal egy, különböző: div, szöveg formázások (h1-h6, p), kódrészletek megosztására készített oldal.</p>    
-        <p>A kód oldalak használata: Egy tetszőleges kód kiválasztása után, a másolás gombra kattintva kimásolja a kódrészletet a vágólapra, a kód megtekintése gombra kattintva pedig értelem szerűen megtekinthetjük a kódot.</p>
+        <p>Az Open-Source oldal egy, különböző: div, szöveg formázások (h1-h6, p), kódrészletek megosztására készített oldal.</p>   
+        <p id="szoveg2">A kód oldalak használata: Egy tetszőleges kód kiválasztása után, a másolás gombra kattintva kimásolja a kódrészletet a vágólapra, a kód megtekintése gombra kattintva pedig értelem szerűen megtekinthetjük a kódot.</p>
         </div>
         <!--Tartalom vége-->
     </div>
