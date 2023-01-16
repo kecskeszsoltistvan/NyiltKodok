@@ -1,21 +1,3 @@
-body{
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
-    background-repeat: no-repeat;
-    margin: auto;
-    width: auto;
-    height: 100vh;
-    font-family: 'Open Sans';
-}
-#Navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
-    border-bottom: 1px solid white;
-}
 #nav1 {
     display: flex;
     width: 550px;
@@ -59,6 +41,23 @@ a{
     text-decoration: none;
     color: white;
 
+}
+#fomenu-gomb{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+#Open-Source-Logo-Letter{
+    height: 26px;
+    top: 4px;
+    align-self: center;
+    height: 28px;
+    width: 28px;
+    background-image: url(./KépekÉsEgyebek/O.png);
+}
+#Open-Source-Logo-Letter:hover{
+    background-image: url(./KépekÉsEgyebek/Logo1.gif);
 }
 /*Asztali nézet only*/
 @media (min-width: 801px) {

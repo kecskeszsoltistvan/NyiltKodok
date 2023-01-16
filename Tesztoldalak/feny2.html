@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fény teszt 2</title>
+<style>
+    body{
+        background: linear-gradient(360deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
+        background-repeat: no-repeat;
+        margin: auto;
+        width: auto;
+        height: 100vh;
+        font-family: 'Open Sans';
+    }
+    .dark-mode{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+    }     
+    .Navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px;
+        background: linear-gradient(270deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
+        color: white;
+        border-bottom: 1px solid white;
+    }
+    .nav-dark-mode{
+        background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+        }   
+</style>
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+       var element2 = document.getElementById("Navbar");
+       element2.classList.toggle("nav-dark-mode");
+       var x = document.getElementById("kod");
+        if (x.innerHTML === "☼") {
+            x.innerHTML = "☾";
+        } else {
+            x.innerHTML = "☼";
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="Navbar" class="Navbar">
+        <span><a onclick="myFunction()" id="kod" >☾</a></span>
+    </div>
+</div>
+</body>
+</html>
