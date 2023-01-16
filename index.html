@@ -21,25 +21,25 @@
         .dark-mode{
         background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
         }     
-        #Navbar {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 0px;
-            background: rgb(0,0,0);
-            background: linear-gradient(270deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
-            border-bottom: 1px solid white;
-        }
-        .nav-dark-mode{
-            background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
-            }   
+        .Navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px;
+        background: linear-gradient(270deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
+        color: white;
+        border-bottom: 1px solid white;
+    }
+    .nav-dark-mode{
+        background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
+        }   
     </style>
     <script>
         function sotet() {
-           var element1 = document.body;
-           element1.classList.toggle("dark-mode");
-           var element2 = document.getElementById("Navbar");
-           element2.classList.toggle("nav-dark-mode");
+            var element1 = document.body;
+            element1.classList.toggle("dark-mode");
+            var element2 = document.getElementById("Navbar");
+            element2.classList.toggle("nav-dark-mode");
         }
         </script>
 </head>
