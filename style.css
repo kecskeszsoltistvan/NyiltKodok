@@ -158,7 +158,15 @@ a{
         padding-top: 3px;
     }
 }
-
+#nevjegyek{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
 .nevjegy{
+    height: 500px;
+    width: 250px;
     border: 2px grey solid;
+    border-radius: 10px;
 }
