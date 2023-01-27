@@ -158,13 +158,35 @@ a{
         padding-top: 3px;
     }
 }
+/*névjegy oldal*/
 #nevjegyek{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 100%;  
+}
+#zsolt{
+    height: 50%;
+    width: 60%;
+    left: 20%;
+    right: 20%;
+}
+#ervin{
+    height: 50%;
+    width: 60%;
+    left:20%;
+    right:20%;
+}
+#konrad{
+    height: 50%;
+    width: 60%;
+    left:20%;
+    right:20%;
 }
 .nevjegy{
+    display: flex;
+    flex-direction: column;
     margin: 8%;
     height: 500px;
     width: 350px;
@@ -181,7 +203,7 @@ a{
 
 .nevjegy img{
     position: relative;
-    left: 20%;
+    
 
 }
 
@@ -189,4 +211,58 @@ a{
     text-align: center;
     text-shadow: 2px 2px #979797;
     font-size: 22px;
+}
+/*Tabletes nézet*/
+@media (max-width:900px){
+    body{
+        height: auto;
+    }
+    #nevjegyek{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        height: 100%;  
+    }
+    #zsolt{
+        height: 50%;
+        width: 60%;
+        left: 20%;
+        right: 20%;
+    }
+    #ervin{
+        height: 50%;
+        width: 60%;
+        left:20%;
+        right:20%;
+    }
+    #konrad{
+        height: 50%;
+        width: 60%;
+        left:20%;
+        right:20%;
+    }
+    .nevjegy{
+        display: flex;
+        flex-direction: column;
+        margin: 8%;
+        height: 80vh;
+        width: 250px;
+        border: 4px grey solid;
+        border-radius: 10px;
+        
+    }
+    .nevjegy p{
+        text-align: justify;
+        padding: 10px;
+    
+    }   
+    .nevjegy img{
+        position: relative;  
+    }
+    .nevjegy h1{
+        text-align: center;
+        text-shadow: 2px 2px #979797;
+        font-size: 22px;
+    }
 }
