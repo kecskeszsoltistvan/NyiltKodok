@@ -17,11 +17,13 @@
     width: auto;
     text-align: center;
     border-right: 1px solid white;
+    font-family: 'Open Sans';
 }
 .main {
     grid-column: 2 / 4;
     max-width: 1500px;
     margin: auto;
+    font-family: 'Open Sans';
 }
 #gombok{
     display: flex;

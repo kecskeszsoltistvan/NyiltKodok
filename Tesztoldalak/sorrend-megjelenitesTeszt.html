@@ -5,9 +5,6 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/kod.css">
     <style>
-        * {
-        box-sizing: border-box;
-        }
         body{
             background: linear-gradient(360deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 53.32%, rgba(0, 0, 0, 0) 91.4%), #000000;
             background-repeat: no-repeat;
@@ -61,6 +58,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        align-items: center;
         gap: 20px;
         }
         /* Eredetileg padding, de most ha ezt kitörlöm a border összeesik szóval marad */
@@ -89,7 +87,7 @@
             border: 6px grey solid;
             border-radius: 20px;
             flex-grow: 2;
-            width: 280px;
+            width: 170px;
             font-weight: bold;
         }
         /* Megjelenített elemek tulajdonságai */
@@ -98,12 +96,13 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            height: 500px;
-            width: 280px;
+            height: 300px;
+            width: 180px;
             border: 6px grey solid;
             border-radius: 20px;
             background-color: white;
             z-index: 1;
+            margin: 10px;
         }
         /* Gomb stílus*/
         .gomb {
