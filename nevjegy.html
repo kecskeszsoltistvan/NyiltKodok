@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Képek és egyebek/Ikon.gif" type="image/gif"/>
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/nevjegy.css">
     <title>OP - Főoldal</title>
     <style>
         body{
@@ -14,8 +15,13 @@
             background-repeat: no-repeat;
             margin: auto;
             width: auto;
-            height: auto;
+            height: 100vh;
             font-family: 'Open Sans';
+        }
+        @media (max-width: 900px) {
+            body{
+                height: auto;
+            }
         }
         .dark-mode{
         background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
@@ -82,7 +88,7 @@
 <body>
     <div id="Hamburger" class="Hamburger">
         <span style="white-space: nowrap; border: white 1px solid;"><a href="./index.html">Open-source</a></span>
-        <span style="white-space: nowrap; border: white 1px solid;"><a>Megosztott kódok</a></span>
+        <span style="white-space: nowrap; border: white 1px solid;"><a href="./megosztottak.html">Megosztott kódok</a></span>
         <span style="white-space: nowrap; border: white 1px solid;"><a href="./nevjegy.html">Névjegy</a></span>
     </div>
     <div id="Navbar" class="Navbar">
@@ -90,7 +96,7 @@
             <div id="logo"></div>
             <div id="segedborder"></div>
             <span id="OS" style="white-space: nowrap;"><a href="./index.html">Open-source</a></span>
-            <span id="MK" style="white-space: nowrap;"><a>Megosztott kódok</a></span>
+            <span id="MK" style="white-space: nowrap;"><a href="./megosztottak.html">Megosztott kódok</a></span>
             <span id="NJ" style="white-space: nowrap;"><a href="./nevjegy.html">Névjegy</a></span>
         </div>
         <div id="nav2">
@@ -103,32 +109,23 @@
     <div>
         <!--Tartalom-->
     <div id="nevjegyek">
-    <div class="nevjegy">    
-        <h1>Kecskés Zsolt István</h1>
-        <img id="zsolt" src="./KépekÉsEgyebek/Zsolt.png">
-        <p>
-            Feladatai között volt a tartalom elkészítése, illetve a többi csapattag HTML- és CSS kódjainak átnézése.
-        </p>
-
-    </div>
-    
-    <div class="nevjegy">
-        <h1>Mojzes Ervin</h1>
-        <img id="ervin" src="./KépekÉsEgyebek/Ervin.png">
-        <p>
-            A projekten belül leginkább a tabletes nézet megvalósításában vette ki a részét, illetve az iconok elkészítésében.
-            
-        </p>
-    </div>
-    
-    <div class="nevjegy">
-        <h1>Somodi Konrád</h1>
-        <img id="konrad" src="./KépekÉsEgyebek/Konrad.png">
-        <p>
-            A projekten belül a CSS formázásokért volt felelős. Emellett a telefonos nézet elkészítése volt a fő feladata.
-           
-        </p>
-    </div>
+        <div class="nevjegy">    
+            <h1>Kecskés Zsolt István</h1>
+            <img src="./KépekÉsEgyebek/Zsolt.png">
+            <p>Feladatai között volt a tartalom elkészítése, illetve a többi csapattag HTML- és CSS kódjainak átnézése.</p>
+        </div>
+        
+        <div class="nevjegy">
+            <h1>Mojzes Ervin</h1>
+            <img src="./KépekÉsEgyebek/Ervin.png">
+            <p>A projekten belül leginkább a tabletes nézet megvalósításában vette ki a részét, illetve az iconok elkészítésében.</p>
+        </div>
+        
+        <div class="nevjegy">
+            <h1>Somodi Konrád</h1>
+            <img src="./KépekÉsEgyebek/Konrad.png">
+            <p>A projekten belül a CSS formázásokért volt felelős. Emellett a telefonos nézet elkészítése volt a fő feladata.</p>
+        </div>
     </div>
         <!--Tartalom vége-->
     </div>
