@@ -30,3 +30,18 @@
     flex-flow: column wrap;
     row-gap: 3px;
 }
+.cucc{
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
+}
+#valasztas-container{
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 0px;
+    border: white 5px solid;
+    border-radius: 5px;
+    width: 170px;
+    align-self: center;
+}

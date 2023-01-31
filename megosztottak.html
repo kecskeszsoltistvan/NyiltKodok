@@ -17,6 +17,7 @@
             width: auto;
             height: auto;
             min-height: 100vh;
+            min-width: 440px;
             font-family: 'Open Sans';
         }
         .dark-mode{
@@ -80,6 +81,9 @@
         display: table;
         clear: both;
         }
+        .row-ford{
+          flex-flow: row-reverse wrap;
+        }
         /* Tartalom */
         .content {
         background-color: white;
@@ -111,18 +115,25 @@
         }
         /* Gomb stílus*/
         .gomb {
-        border: none;
         outline: none;
-        background-color: white;
+        background-color: rgb(165, 118, 0);
+        border: 2px white solid;
+        border-radius: 5px;
         cursor: pointer;
+        color: white;
+        width: 150px;
+        align-self: center;
         }
         .gomb:hover {
         background-color: #ddd;
         }
         .gomb.active {
-        background-color: #666;
+        background-color: #000;
         color: white;
         }
+        .GombSotet{
+          background-color: rgb(0,0,80);
+        } 
     </style>
 </head>
 <body>
@@ -150,16 +161,30 @@
 </div>
 <div id="all-content">
     <div class="sub" id="sub">
-        <h2 style="color: white;">Rendezés</h2>
+        <h2 style="color: white;">Rendezd el:</h2>
+      <div id="valasztas-container">
+        <p>Az </p>
         <div id="gombok">
-            <button class="gomb active" onclick="filterSelection('all')"> Minden</button>
-            <button class="gomb" onclick="filterSelection('text')"> Szöveg formázás</button>
-            <button class="gomb" onclick="filterSelection('div')"> Div formázás</button>
-            <button class="gomb" onclick="filterSelection('other')"> Egyéb tartalom</button>
+            <button class="gomb active" onclick="filterSelection('all')"> összes formázást</button>
+            <button class="gomb" onclick="filterSelection('text')"> szöveg formázásokat</button>
+            <button class="gomb" onclick="filterSelection('div')"> div formázásokat</button>
+            <button class="gomb" onclick="filterSelection('other')"> egyéb formázásokat</button>
         </div>
+        <hr style="width: 150px;">
+        <label class="cucc">
+          <input type="checkbox" id="nov" name="sorr" value="1" onclick="Sorrendeles()">
+          <p id="Jsr">Növekvő</p>
+        </label>
+        <hr style="width: 150px;">
+          <p>sorrendbe</p>
+          
+      </div>
+        
+        
     </div>
+    <!--A Kódok/tartalom-->
     <div class="main">
-    <div class="row">
+    <div class="row" id="row">
       <div class="column text">
         <div class="content">
           <img src="../KépekÉsEgyebek/free-ipad.png" alt="Mountains" style="width:100%">
@@ -186,8 +211,7 @@
     
     </div>
 </div>
-
-
+<!--Tartalmon vége. Ez alatt JavaScript van-->
 <script>
     function sotet() {
         var element1 = document.body;
@@ -198,6 +222,11 @@
         element3.classList.toggle("HamburgerSotet");
         var element4 = document.getElementById("sub");
         element4.classList.toggle("subSotet");
+        var element5 = document.getElementsByClassName("gomb");
+        for (var element of element5) {
+          element.classList.toggle("GombSotet");
+        }
+        element5.classList.toggle("GombSotet");
      } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
      function HamburgerMenu() {
          var test = document.body;
@@ -253,6 +282,17 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}
+function Sorrendeles() {
+  var csekboksz = document.getElementById("nov");
+  if (csekboksz.checked == true) {
+    document.getElementById("Jsr").innerHTML = "Csökkenő";
+  }
+  else {
+    document.getElementById("Jsr").innerHTML = "Növekvő";
+  }
+  var elementX = document.getElementById("row");
+    elementX.classList.toggle("row-ford")
 }
 </script>
 </body>
