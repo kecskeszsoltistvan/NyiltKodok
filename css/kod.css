@@ -1,6 +1,7 @@
 #all-content{
     display: grid;
     grid-template-columns: 200px auto auto;
+    grid-template-rows: 300px auto auto;
 }
 .sub{
     overflow-x: hidden;
@@ -44,4 +45,45 @@
     border-radius: 5px;
     width: 170px;
     align-self: center;
+}
+@media (max-width: 800px) {
+    #all-content{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .sub{
+        overflow-x: hidden;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 100%), #000000;
+        min-height: 50px;
+        max-height: 200px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: auto;
+        border-bottom: 1px solid white;
+        border-right: none;
+        font-family: 'Open Sans';
+    }  
+    .main {
+        max-width: 1500px;
+        margin: auto;
+        font-family: 'Open Sans';
+    }
+    #valasztas-container {
+        display: flex;
+        flex-flow: row wrap;
+        border: white 5px solid;
+        border-radius: 5px;
+        width: 450px;
+        align-self: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #valasztas-container hr {
+        display: none;
+    }
 }
