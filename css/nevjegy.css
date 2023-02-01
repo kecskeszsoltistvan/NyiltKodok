@@ -6,6 +6,7 @@
     flex-wrap: nowrap;
     width: 100vw;
     height: 90vh;
+    min-height: 93.5vh;
 }
 .nevjegy{
     display: flex;
