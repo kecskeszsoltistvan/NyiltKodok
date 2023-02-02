@@ -60,7 +60,6 @@
         } 
         /* A tartalmak Flex-e */
         .row {
-        margin: 10px -16px;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -86,27 +85,7 @@
           flex-flow: row-reverse wrap;
         }
         /* Tartalom */
-        .content {
-        background-color: white;
-        padding: 3px;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        border: 3px gray solid;
-        border-radius: 20px;
-        width: 170px;
-        height: 170px;
-        }
-        .contentc{
-            text-align: justify;
-            padding: 10px;
-            color: black;
-            border: 6px grey solid;
-            border-radius: 20px;
-            flex-grow: 2;
-            width: 170px;
-            font-weight: bold;
-        }
+        
         /* Megjelenített elemek tulajdonságai */
         .show {
             display: flex;
@@ -120,24 +99,6 @@
             background-color: white;
             z-index: 1;
             margin: 10px;
-        }
-        /* Gomb stílus*/
-        .gomb {
-        outline: none;
-        background-color: rgb(165, 118, 0);
-        border: 2px white solid;
-        border-radius: 5px;
-        cursor: pointer;
-        color: white;
-        width: 150px;
-        align-self: center;
-        }
-        .gomb:hover {
-        background-color: #ddd;
-        }
-        .gomb.active {
-        background-color: #000;
-        color: white;
         }
         .GombSotet{
           background-color: rgb(0,0,80);
@@ -195,33 +156,14 @@
           <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
           <h4>Szöveg1</h4>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
-      </div>
-      <div class="column text">
-        <div class="content">
-          <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
-          <h4>Szöveg2</h4>
+        <div class="contentc">
+          <a onclick="Masolas(0)">Teszt</a>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
       </div>
       <div class="column div">
         <div class="content">
         <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
           <h4>Div1</h4>
-        </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
-      </div>
-      <div class="column div">
-        <div class="content">
-        <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
-          <h4>Div2</h4>
-        </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
-      </div>
-      <div class="column div">
-        <div class="content">
-        <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
-          <h4>Div3</h4>
         </div>
         <div class="contentc">Lorem ipsum dolor..</div>
       </div>
@@ -253,7 +195,6 @@
         element5.classList.toggle("GombSotet");
      } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
      function HamburgerMenu() {
-         var test = document.body;
          var x = document.getElementById("Hamburger");
          if (x.className === "Hamburger") {
            x.className = "HamburgerOpen";
@@ -317,6 +258,11 @@ function Sorrendeles() {
   }
   var elementX = document.getElementById("row");
     elementX.classList.toggle("row-ford")
+}
+function Masolas(MasoltIndex) {
+  if (MasoltIndex === 0){
+    navigator.clipboard.writeText("Hello")
+  }
 }
 </script>
 </body>
