@@ -46,7 +46,7 @@
     width: 170px;
     align-self: center;
 }
-@media (max-width: 800px) {
+@media (max-width: 940px) {
     #all-content{
         display: flex;
         flex-flow: column nowrap;
