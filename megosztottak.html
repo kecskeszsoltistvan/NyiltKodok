@@ -85,7 +85,7 @@
           flex-flow: row-reverse wrap;
         }
         /* Tartalom */
-        
+
         /* Megjelenített elemek tulajdonságai */
         .show {
             display: flex;
@@ -153,26 +153,39 @@
     <div class="row" id="row">
       <div class="column text">
         <div class="content">
-          <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
           <h4>Szöveg1</h4>
         </div>
         <div class="contentc">
-          <a onclick="Masolas(0)">Teszt</a>
+          <a onclick="MasolasIL(0)">Inline</a>
+          <a onclick="Masolas(0)">CSS</a>
+        </div>
+      </div>
+      <div class="column div">
+        <div class="content" style="background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,5,68,1) 63%, rgba(17,17,145,1) 96%); color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+          <h4>Mély tenger</h4>
+        </div>
+        <div class="contentc">
+          <a onclick="MasolasIL(1)">Inline</a>
+          <a onclick="MasolasCSS(1)">CSS</a>
         </div>
       </div>
       <div class="column div">
         <div class="content">
-        <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
-          <h4>Div1</h4>
+          <h4>Div2</h4>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
+        <div class="contentc">
+          <a onclick="MasolasIL(2)">Inline</a>
+          <a onclick="MasolasCSS(2)">CSS</a>
+        </div>
       </div>
       <div class="column other">
         <div class="content">
-        <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
           <h4>Egyéb1</h4>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
+        <div class="contentc">
+          <a onclick="MasolasIL(3)">Inline</a>
+          <a onclick="MasolasCSS(3)">CSS</a>
+        </div>
       </div>
     </div>
   </div>
@@ -249,9 +262,32 @@ function Sorrendeles() {
   var elementX = document.getElementById("row");
     elementX.classList.toggle("row-ford")
 }
-function Masolas(MasoltIndex) {
+function MasolasIL(MasoltIndex) {
   if (MasoltIndex === 0){
-    navigator.clipboard.writeText("Hello")
+    navigator.clipboard.writeText('<div style="background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,5,68,1) 63%, rgba(17,17,145,1) 96%); color: white; font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;"> <h4>Mély tenger</h4> </div>')
+  }
+  else if (MasoltIndex === 1){
+    navigator.clipboard.writeText('<div style="background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,5,68,1) 63%, rgba(17,17,145,1) 96%); color: white; font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;"> <h4>Mély tenger</h4> </div>')
+  }
+  else if (MasoltIndex === 2){
+    navigator.clipboard.writeText("Bello")
+  }
+  else if (MasoltIndex === 3){
+    navigator.clipboard.writeText("Csumi")
+  }
+}
+function MasolasCSS(MasoltIndex) {
+  if (MasoltIndex === 0){
+    navigator.clipboard.writeText('')
+  }
+  else if (MasoltIndex === 1){
+    navigator.clipboard.writeText('background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,5,68,1) 63%, rgba(17,17,145,1) 96%);\ncolor: white;\nfont-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;')
+  }
+  else if (MasoltIndex === 2){
+    navigator.clipboard.writeText("Bello")
+  }
+  else if (MasoltIndex === 3){
+    navigator.clipboard.writeText("Csumi")
   }
 }
 </script>
