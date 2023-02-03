@@ -59,14 +59,13 @@
             background: linear-gradient(0deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
         } 
         /* A tartalmak Flex-e */
-        .row {        
+        .row {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
         gap: 20px;
         max-width: 80vw;
-
         }
         /* Eredetileg padding, de most ha ezt kitörlöm a border összeesik szóval marad */
         .row,
@@ -85,27 +84,7 @@
           flex-flow: row-reverse wrap;
         }
         /* Tartalom */
-        .content {
-        background-color: white;
-        padding: 3px;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        border: 3px gray solid;
-        border-radius: 20px;
-        width: 170px;
-        height: 170px;
-        }
-        .contentc{
-            text-align: justify;
-            padding: 10px;
-            color: black;
-            border: 6px grey solid;
-            border-radius: 20px;
-            flex-grow: 2;
-            width: 170px;
-            font-weight: bold;
-        }
+
         /* Megjelenített elemek tulajdonságai */
         .show {
             display: flex;
@@ -119,24 +98,6 @@
             background-color: white;
             z-index: 1;
             margin: 10px;
-        }
-        /* Gomb stílus*/
-        .gomb {
-        outline: none;
-        background-color: rgb(165, 118, 0);
-        border: 2px white solid;
-        border-radius: 5px;
-        cursor: pointer;
-        color: white;
-        width: 150px;
-        align-self: center;
-        }
-        .gomb:hover {
-        background-color: #ddd;
-        }
-        .gomb.active {
-        background-color: #000;
-        color: white;
         }
         .GombSotet{
           background-color: rgb(0,0,80);
@@ -191,45 +152,39 @@
     <div class="row" id="row">
       <div class="column text">
         <div class="content">
-          <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
           <h4>Szöveg1</h4>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
-      </div>
-      <div class="column text">
-        <div class="content">
-          <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
-          <h4>Szöveg2</h4>
+        <div class="contentc">
+          <a onclick="MasolasIL(0)">Inline</a>
+          <a onclick="Masolas(0)">CSS</a>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
+      </div>
+      <div class="column div">
+        <div class="content" style="background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,5,68,1) 63%, rgba(17,17,145,1) 96%); color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+          <h4>Mély tenger</h4>
+        </div>
+        <div class="contentc">
+          <a onclick="MasolasIL(1)">Inline</a>
+          <a onclick="MasolasCSS(1)">CSS</a>
+        </div>
       </div>
       <div class="column div">
         <div class="content">
-        <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
-          <h4>Div1</h4>
-        </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
-      </div>
-      <div class="column div">
-        <div class="content">
-        <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
           <h4>Div2</h4>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
-      </div>
-      <div class="column div">
-        <div class="content">
-        <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
-          <h4>Div3</h4>
+        <div class="contentc">
+          <a onclick="MasolasIL(2)">Inline</a>
+          <a onclick="MasolasCSS(2)">CSS</a>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
       </div>
       <div class="column other">
         <div class="content">
-        <img src="./KépekÉsEgyebek/free-ipad.png" alt="free-ipad" style="width:100%">
           <h4>Egyéb1</h4>
         </div>
-        <div class="contentc">Lorem ipsum dolor..</div>
+        <div class="contentc">
+          <a onclick="MasolasIL(3)">Inline</a>
+          <a onclick="MasolasCSS(3)">CSS</a>
+        </div>
       </div>
     </div>
   </div>
@@ -237,35 +192,24 @@
 <!--Tartalmon vége. Ez alatt JavaScript van-->
 <script>
     function sotet() {
-        var element1 = document.body;
-        element1.classList.toggle("dark-mode");
-        var element2 = document.getElementById("Navbar");
-        element2.classList.toggle("nav-dark-mode");
-        var element3 = document.getElementById("Hamburger");
-        element3.classList.toggle("HamburgerSotet");
-        var element4 = document.getElementById("sub");
-        element4.classList.toggle("subSotet");
-        var element5 = document.getElementsByClassName("gomb");
-        for (var element of element5) {
-          element.classList.toggle("GombSotet");
+        var body = document.body;
+        body.classList.toggle("dark-mode");
+        var Nav = document.getElementById("Navbar");
+        Nav.classList.toggle("nav-dark-mode");
+        var hamb = document.getElementById("Hamburger");
+        hamb.classList.toggle("HamburgerSotet");
+        var menu = document.getElementById("sub");
+        menu.classList.toggle("subSotet");
+        var gomb = document.getElementsByClassName("gomb");
+        for (var g of gomb) {
+          g.classList.toggle("GombSotet");
         }
-        element5.classList.toggle("GombSotet");
+        gomb.classList.toggle("GombSotet");
      } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
      function HamburgerMenu() {
-         var test = document.body;
          var x = document.getElementById("Hamburger");
-         if (x.className === "Hamburger") {
-           x.className = "HamburgerOpen";
-         } 
-         else if (x.className === "Hamburger HamburgerSotet") {
-             x.className = "HamburgerOpen HamburgerSotet";
-         }
-         else if (x.className === "HamburgerOpen"){
-           x.className = "Hamburger";
-         }
-         else if (x.className === "HamburgerOpen HamburgerSotet"){
-             x.className = "Hamburger HamburgerSotet";
-           }
+         x.classList.toggle("Hamburger");
+         x.classList.toggle("HamburgerOpen");
        } //Hamburger menü nyitása és csukása (Amennyiben a méretezés engedi, hogy egyáltalán megjelenjen)
 filterSelection("all")
 function filterSelection(c) {
@@ -273,11 +217,11 @@ function filterSelection(c) {
   x = document.getElementsByClassName("column");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
   }
 }
-function w3AddClass(element, name) {
+function AddClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -285,7 +229,7 @@ function w3AddClass(element, name) {
     if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
   }
 }
-function w3RemoveClass(element, name) {
+function RemoveClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -316,6 +260,34 @@ function Sorrendeles() {
   }
   var elementX = document.getElementById("row");
     elementX.classList.toggle("row-ford")
+}
+function MasolasIL(MasoltIndex) {
+  if (MasoltIndex === 0){
+    navigator.clipboard.writeText('<div style="background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,5,68,1) 63%, rgba(17,17,145,1) 96%); color: white; font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;"> <h4>Mély tenger</h4> </div>')
+  }
+  else if (MasoltIndex === 1){
+    navigator.clipboard.writeText('<div style="background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,5,68,1) 63%, rgba(17,17,145,1) 96%); color: white; font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;"> <h4>Mély tenger</h4> </div>')
+  }
+  else if (MasoltIndex === 2){
+    navigator.clipboard.writeText("Bello")
+  }
+  else if (MasoltIndex === 3){
+    navigator.clipboard.writeText("Csumi")
+  }
+}
+function MasolasCSS(MasoltIndex) {
+  if (MasoltIndex === 0){
+    navigator.clipboard.writeText('')
+  }
+  else if (MasoltIndex === 1){
+    navigator.clipboard.writeText('background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,5,68,1) 63%, rgba(17,17,145,1) 96%);\ncolor: white;\nfont-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;')
+  }
+  else if (MasoltIndex === 2){
+    navigator.clipboard.writeText("Bello")
+  }
+  else if (MasoltIndex === 3){
+    navigator.clipboard.writeText("Csumi")
+  }
 }
 </script>
 </body>
