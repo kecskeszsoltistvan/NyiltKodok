@@ -62,20 +62,9 @@
            element3.classList.toggle("HamburgerSotet");
         } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
         function HamburgerMenu() {
-            var test = document.body;
-            var x = document.getElementById("Hamburger");
-            if (x.className === "Hamburger") {
-              x.className = "HamburgerOpen";
-            } 
-            else if (x.className === "Hamburger HamburgerSotet") {
-                x.className = "HamburgerOpen HamburgerSotet";
-            }
-            else if (x.className === "HamburgerOpen"){
-              x.className = "Hamburger";
-            }
-            else if (x.className === "HamburgerOpen HamburgerSotet"){
-                x.className = "Hamburger HamburgerSotet";
-              }
+         var x = document.getElementById("Hamburger");
+         x.classList.toggle("Hamburger");
+         x.classList.toggle("HamburgerOpen");
           } //Hamburger menü nyitása és csukása (Amennyiben a méretezés engedi, hogy egyáltalán megjelenjen)
         </script>
 </head>
