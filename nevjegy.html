@@ -60,17 +60,28 @@
     </style>
     <script>
         function sotet() {
-            var body = document.body;
-        body.classList.toggle("dark-mode");
-        var Nav = document.getElementById("Navbar");
-        Nav.classList.toggle("nav-dark-mode");
-        var hamb = document.getElementById("Hamburger");
-        hamb.classList.toggle("HamburgerSotet");
+           var element1 = document.body;
+           element1.classList.toggle("dark-mode");
+           var element2 = document.getElementById("Navbar");
+           element2.classList.toggle("nav-dark-mode");
+           var element3 = document.getElementById("Hamburger");
+           element3.classList.toggle("HamburgerSotet");
         } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
         function HamburgerMenu() {
-         var x = document.getElementById("Hamburger");
-         x.classList.toggle("Hamburger");
-         x.classList.toggle("HamburgerOpen");
+            var test = document.body;
+            var x = document.getElementById("Hamburger");
+            if (x.className === "Hamburger") {
+              x.className = "HamburgerOpen";
+            } 
+            else if (x.className === "Hamburger HamburgerSotet") {
+                x.className = "HamburgerOpen HamburgerSotet";
+            }
+            else if (x.className === "HamburgerOpen"){
+              x.className = "Hamburger";
+            }
+            else if (x.className === "HamburgerOpen HamburgerSotet"){
+                x.className = "Hamburger HamburgerSotet";
+              }
           } //Hamburger menü nyitása és csukása (Amennyiben a méretezés engedi, hogy egyáltalán megjelenjen)
         </script>
 </head>
