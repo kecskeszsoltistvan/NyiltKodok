@@ -11,7 +11,7 @@
     justify-content: space-evenly;
 }
 #Navbar{
-    min-width: 100vw;
+    width: 100vw;
 }
 h1, p, i{
     color: white;
@@ -74,21 +74,21 @@ a{
     }
     body{
         height: auto;
-        min-height: 100vh;
+        width: auto;
     }
     #logo{
         width: 35px;              
         margin-top: 10px;
         margin-bottom: 11px;
         margin-left: 2px;                 
-        background-image: url(.//Képek\ és\ egyebek/O.png);             
+        background-image: url(.//KépekÉsEgyebel);             
     }
     #logo:hover{
         width: 35px;              
         margin-top: 10px;
         margin-bottom: 11px;
         margin-left: 2px;                 
-        background-image: url(.//Képek\ és\ egyebek/Logo1nagy.gif);             
+        background-image: url(../KépekÉsEgyebek/Logo1nagy.gif);           
     }
     #segedborder{
         border-left: 1px solid white;
@@ -103,7 +103,7 @@ a{
         padding: 0px;
         border-bottom: 1px solid white;
         z-index: 5;
-        min-width: 100vw;
+        width: auto;
     }
     #nav1{
         display: flex;
@@ -128,8 +128,8 @@ a{
     }
     body{
         height: auto;
-        min-height: 100vh;
-        min-width: 440px;
+        width: auto;
+
     }
     #logo{
         width: 35px;              
