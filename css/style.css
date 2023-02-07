@@ -1,3 +1,7 @@
+body{
+    height: 100vh;
+}
+
 #nav1 {
     display: flex;
     width: 550px;
@@ -73,8 +77,12 @@ a{
         display: none;
     }
     body{
-        height: auto;
-        width: auto;
+        height: 100%;
+        width: 100%;
+    }
+    #padding{
+        padding-right: 3.5px;
+        padding-left: 3.5px;
     }
     #logo{
         width: 35px;              
@@ -127,9 +135,13 @@ a{
         text-align: center;
     }
     body{
-        height: auto;
-        width: auto;
-
+        height: 100%;
+        padding-right: 3.5px;
+        padding-left: 3.5px;
+    }
+    #padding{
+        padding-right: 3.5px;
+        padding-left: 3.5px;
     }
     #logo{
         width: 35px;              
@@ -157,7 +169,7 @@ a{
         justify-content:space-between;
         padding: 0px;
         border-bottom: 1px solid white;
-        min-width: 100%;
+        width: auto;
     }
     #nav1{
         justify-content: flex-start;
