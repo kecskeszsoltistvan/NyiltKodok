@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./Képek és egyebek/Ikon.gif" type="image/gif"/>
+  <link rel="icon" href="./KépekÉsEgyebek/Ikon.gif" type="image/gif"/>
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <link rel="stylesheet" href="./css/kod.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -192,7 +192,9 @@
 </div>
 </div>
 <!--Tartalmon vége. Ez alatt JavaScript van-->
+</body>
 <script>
+  let DefColor = localStorage.getItem('darkmode');
     function sotet() {
         var body = document.body;
         body.classList.toggle("dark-mode");
@@ -204,10 +206,18 @@
         menu.classList.toggle("subSotet");
         var gomb = document.getElementsByClassName("gomb");
         for (var g of gomb) {
-          g.classList.toggle("GombSotet");
+            g.classList.toggle("GombSotet");
         }
-        gomb.classList.toggle("GombSotet");
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem('darkmode', true)
+        }
+        else if (!body.classList.contains("dark-mode")){
+            localStorage.setItem('darkmode', false)
+      }
      } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
+    if (DefColor == "true") {
+        sotet();
+    };
      function HamburgerMenu() {
          var x = document.getElementById("Hamburger");
          x.classList.toggle("Hamburger");
@@ -292,5 +302,4 @@ function MasolasCSS(MasoltIndex) {
   }
 }
 </script>
-</body>
 </html>

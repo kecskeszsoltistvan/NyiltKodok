@@ -14,8 +14,10 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
 }
+@media (min-width: 800px) {
 #Navbar{
     width: auto;
+}
 }
 h1, p, i{
     color: white;
