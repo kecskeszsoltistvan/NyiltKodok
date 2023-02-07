@@ -81,8 +81,8 @@ a{
         width: 100%;    
     }
     #padding{
-        padding-right: 3.5px;
-        padding-left: 3.5px;
+        margin: 0.5px;
+        
     }
     #logo{
         width: 35px;              
@@ -169,7 +169,7 @@ a{
         justify-content:space-between;
         padding: 0px;
         border-bottom: 1px solid white;
-        width: auto;
+        width: 100vh;
     }
     #nav1{
         justify-content: flex-start;
