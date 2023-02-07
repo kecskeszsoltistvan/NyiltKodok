@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./Képek és egyebek/Ikon.gif" type="image/gif"/>
+    <link rel="icon" href="./KépekÉsEgyebek/Ikon.gif" type="image/gif"/>
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link rel="stylesheet" href="./css/style.css">
     <title>OP - Főoldal</title>
@@ -15,6 +15,7 @@
             margin: auto;
             width: auto;
             font-family: 'Open Sans';
+            min-height: 100vh;
         }
         .dark-mode{
         background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,80,1) 95%);
@@ -51,21 +52,6 @@
             }
         }
     </style>
-    <script>
-        function sotet() {
-            var body = document.body;
-        body.classList.toggle("dark-mode");
-        var Nav = document.getElementById("Navbar");
-        Nav.classList.toggle("nav-dark-mode");
-        var hamb = document.getElementById("Hamburger");
-        hamb.classList.toggle("HamburgerSotet");
-        } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
-        function HamburgerMenu() {
-         var x = document.getElementById("Hamburger");
-         x.classList.toggle("Hamburger");
-         x.classList.toggle("HamburgerOpen");
-          } //Hamburger menü nyitása és csukása (Amennyiben a méretezés engedi, hogy egyáltalán megjelenjen)
-        </script>
 </head>
 <body>
 <div id="padding">
@@ -94,10 +80,35 @@
         <div class="tartalom">
         <h1 style="text-align: center;">Open-Source</h1>
         <p>Az Open-Source oldal egy, különböző: div, szöveg formázások (h1-h6, p), kódrészletek megosztására készített oldal.</p>   
-        <p id="szoveg2">A kód oldalak használata: Egy tetszőleges kód kiválasztása után, a másolás gombra kattintva kimásolja a kódrészletet a vágólapra, a kód megtekintése gombra kattintva pedig értelem szerűen megtekinthetjük a kódot.</p>
+        <p id="szoveg2">A kód oldalak használata: Egy tetszőleges kód kiválasztása után, a másolás gombra kattintva kimásolja a kódrészletet a vágólapra. Néhány kód több féle képpen is kimásolható</p>
         </div>
         <!--Tartalom vége-->
     </div>
 </div> 
 </body>
+<script>
+    let DefColor = localStorage.getItem('darkmode');
+    function sotet() {
+        var body = document.body;
+        body.classList.toggle("dark-mode");
+        var Nav = document.getElementById("Navbar");
+        Nav.classList.toggle("nav-dark-mode");
+        var hamb = document.getElementById("Hamburger");
+        hamb.classList.toggle("HamburgerSotet");
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem('darkmode', true)
+        }
+        else if (!body.classList.contains("dark-mode")){
+            localStorage.setItem('darkmode', false)
+        }
+    } // Sötét-Világos mód váltás. A váltogatás elvett az életemből úgy 5 órát, mert a Javascript az szeret csak nagyon specifikus módon működni, de a lényeg, hogy működik
+    if (DefColor == "true") {
+        sotet();
+    };
+    function HamburgerMenu() {
+     var x = document.getElementById("Hamburger");
+     x.classList.toggle("Hamburger");
+     x.classList.toggle("HamburgerOpen");
+      } //Hamburger menü nyitása és csukása (Amennyiben a méretezés engedi, hogy egyáltalán megjelenjen)
+    </script>
 </html>
