@@ -39,7 +39,8 @@
     left: 0;
     grid-column: 1 / 1;
     background: linear-gradient(180deg, rgba(255, 184, 0, 0.7) 0%, rgba(255, 184, 0, 0.294) 100%), #000000;
-    height: 91.7vh;
+    height: auto;
+    min-height: 94.6vh;
     display: flex;
     flex-flow: column wrap;
     align-items: stretch;
@@ -107,7 +108,7 @@
     -webkit-text-fill-color: transparent;
     cursor: pointer;
 }
-@media (max-width: 940px) {
+@media (max-width: 1150px) {
     #all-content{
         display: flex;
         flex-flow: column nowrap;

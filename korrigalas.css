@@ -1,8 +1,8 @@
 body{
     height: auto;
     min-height: 100vh;
-}
 
+}
 #nav1 {
     display: flex;
     width: 550px;
@@ -83,8 +83,9 @@ a{
         height: 100%;
         width: 100%;    
     }
-    #padding{
+    #tartalom{
         margin: 0.5px;
+
         
     }
     #logo{
@@ -142,7 +143,7 @@ a{
         padding-right: 3.5px;
         padding-left: 3.5px;
     }
-    #padding{
+    #tartalom{
         padding-right: 3.5px;
         padding-left: 3.5px;
     }
