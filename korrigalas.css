@@ -15,11 +15,10 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
 }
-@media (min-width: 800px) {
 #Navbar{
     width: auto;
 }
-}
+
 h1, p, i{
     color: white;
 }
@@ -80,20 +79,19 @@ a{
         display: none;
     }
     body{
-        height: 100%;
-        width: 100%;    
+        height: auto;
+        width: auto;    
     }
     #tartalom{
-        margin: 0.5px;
-
-        
+        padding-right: 3.5px;
+        padding-left: 3.5px;       
     }
     #logo{
         width: 35px;              
         margin-top: 10px;
         margin-bottom: 11px;
         margin-left: 2px;                 
-        background-image: url(.//KépekÉsEgyebel);             
+        background-image: url(../KépekÉsEgyebek/O.png);         
     }
     #logo:hover{
         width: 35px;              
@@ -140,12 +138,12 @@ a{
     }
     body{
         height: 100%;
-        padding-right: 3.5px;
-        padding-left: 3.5px;
+        width: auto;
     }
     #tartalom{
         padding-right: 3.5px;
         padding-left: 3.5px;
+
     }
     #logo{
         width: 35px;              
@@ -173,7 +171,7 @@ a{
         justify-content:space-between;
         padding: 0px;
         border-bottom: 1px solid white;
-        width: 100vh;
+        width: auto;
     }
     #nav1{
         justify-content: flex-start;
